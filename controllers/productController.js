@@ -9,5 +9,9 @@ router.get('/create', (req, res) => {
 }); 
 router.get('/details/:productId', (req, res) => {
     res.render('details', {title :'Details'});
-});
+}); 
+router.post('/create', (req,res) => {
+    console.log(req.body); 
+    res.send('created')
+})
 module.exports = router;
